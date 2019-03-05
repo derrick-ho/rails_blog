@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
 
    def create
       @article = Article.new(article_params)
+      @article.author_id = current_user.id
       @article.save
 
       flash.notice = "Article '#{@article.title}' Created!"
@@ -39,6 +40,7 @@ class ArticlesController < ApplicationController
 
    def update
       @article = Article.find(params[:id])
+      @article.author_id = current_user.id
       @article.update(article_params)
 
       flash.notice = "Article '#{@article.title}' Updated!"

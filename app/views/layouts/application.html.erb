@@ -17,7 +17,12 @@
           <%= link_to "(logout)", logout_path %>
         <% else %>
           <%= link_to "(login)", login_path %>
+          <%= link_to "(create a new account)", new_author_path %>
         <% end %>
+      </h6>
+      <h6>
+         <%= link_to "Home", root_path %>
+      </h6>
       </h6>
     </div>
   </div>
