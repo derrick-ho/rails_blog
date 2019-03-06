@@ -1,4 +1,6 @@
 <h1><%= @article.title %> by <%= @article.author.username %></h1>
+<p>Posted on <%= @article.created_at %></p>
+<p>Viewed <%= @article.views %> times</p>
 <p>
   Tags:
   <% @article.tags.each do |tag| %>
@@ -12,7 +14,6 @@
 </p>
 
 <p><%= @article.body %></p>
-<p>Viewed <%= @article.views %> times</p>
 <h3>Comments (<%= @article.comments.size %>)</h3>
 <%= render partial: 'articles/comment', collection: @article.comments %>
 <%= render partial: 'comments/form' %>
@@ -22,3 +23,4 @@
    <%= link_to "edit", edit_article_path(@article) %>
    <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}%>
 <% end %>
+

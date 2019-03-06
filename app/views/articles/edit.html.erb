@@ -1,2 +1,6 @@
 <h1>Edit an Article</h1>
-<%= render partial: 'form' %>
+<% if @article.author.id == current_user.id %>
+   <%= render partial: 'form' %>
+<% else %>
+   <h4>You do not have permission to edit this article.</h4>
+<% end %>
