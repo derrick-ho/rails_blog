@@ -7,7 +7,7 @@ gem 'rails', '4.2.10'
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Modified for Heroku~~~~~~~~~~~~~~~~~~~~~~~~~
 # gem 'sqlite3' 
 group :development, :test do
- gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.13'
 end
 
 group :production do
