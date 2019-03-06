@@ -10,10 +10,11 @@ group :development, :test do
   gem 'sqlite3', '~> 1.3.13'
 end
 
-group :production do
+# Commented out for Heroku
+#group :production do
   gem 'pg', '~> 0.20'
   gem 'rails_12factor'
-end
+#end
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
